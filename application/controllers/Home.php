@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('ModelData');
-                $this->load->helper('url');
+        $this->load->helper('url');
 	}
 
 	public function index()
@@ -27,6 +27,37 @@ class Home extends CI_Controller {
 		$this->load->view('component/topbar'); 
 		$this->load->view('public/alternatif',$data);
 		$this->load->view('component/footer');
+	}
+
+	public function tambah_alternatif()
+	{
+		$data['data'] = $this->ModelData->tampil_data_alternatif()->result();
+		$this->load->view('component/header');
+		$this->load->view('component/sidebar'); 
+		$this->load->view('component/topbar'); 
+		$this->load->view('public/tambah_alternatif',$data);
+		$this->load->view('component/footer');
+	}
+
+	function aksi_tambah(){
+		$nama = $this->input->post('nama');
+		$ijazah = $this->input->post('ijazah');
+		$skill = $this->input->post('skill');
+		$motivasi = $this->input->post('motivasi');
+		$etoskerja = $this->input->post('etoskerja');
+		$dipercaya = $this->input->post('dipercaya');
+ 
+		$data = array(
+			'nama' => $nama,
+			'ijazah' => $ijazah,
+			'skill' => $skill,
+			'motivasi' => $motivasi,
+			'etoskerja' => $etoskerja,
+			'dipercaya' => $dipercaya,
+
+			);
+		$this->ModelData->input_data($data,'alternatif');
+		redirect('home/vectorv');
 	}
 
 	public function bobot()

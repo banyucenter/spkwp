@@ -13,7 +13,8 @@
 
           <!-- Content Row -->
           <div class="row">
-
+            <a class="btn btn-primary" href="<?php echo base_url().'home/tambah_alternatif';?>">Tambah Data</a>
+<hr>
           <table class="table table-striped">
             <thead>
                 <tr>

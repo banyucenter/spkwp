@@ -24,5 +24,9 @@ class ModelData extends CI_Model{
     
     function tampil_data_vectorv(){
 		return $this->db->get('v_vectorv');
-	}
+    }
+  
+    function input_data($data,$table){
+		$this->db->insert($table,$data);
+	  }
 }
