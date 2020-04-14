@@ -50,6 +50,11 @@
           <span>Nilai Bobot</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url().'home/bobotpangkat';?>">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Nilai Bobot Pangkat</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url().'home/vectors';?>">
           <i class="fas fa-fw fa-table"></i>
           <span>Vector S</span></a>

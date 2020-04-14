@@ -39,6 +39,16 @@ class Home extends CI_Controller {
 		$this->load->view('component/footer');
 	}
 
+	public function bobotpangkat()
+	{
+		$data['data'] = $this->ModelData->tampil_data_pangkat()->result();
+		$this->load->view('component/header');
+		$this->load->view('component/sidebar'); 
+		$this->load->view('component/topbar'); 
+		$this->load->view('public/nilaibobotpangkat',$data);
+		$this->load->view('component/footer');
+	}
+
 	public function vectors()
 	{
 		$data['data'] = $this->ModelData->tampil_data_vectors()->result();

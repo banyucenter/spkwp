@@ -30,7 +30,7 @@
                 <tr>
                 <th scope="row"><?php echo $no++ ?></th>
                 <td><?php echo $u->nama ?></td>
-                <td><?php echo $u->vector_s ?></td>
+                <td><?php echo $u->vector_v ?></td>
                 </tr>
                  <?php } ?>
                 
